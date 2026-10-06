@@ -1,0 +1,3 @@
+class,patients,min_hours,p25_hours,median_hours,mean_hours,p75_hours,max_hours
+sepsis,2932,8,15.0,37.5,58.80286493860846,81.0,336
+non_sepsis,37404,8,24.0,39.0,36.889102769757244,46.0,336

@@ -1,0 +1,1273 @@
+{
+  "project": "X-FedSepsis",
+  "step": "2_verification",
+  "overall_pass": true,
+  "total_checks": 252,
+  "passed": 252,
+  "failed": 0,
+  "warnings": 0,
+  "checks": [
+    {
+      "check": "Exists: SEPSIS",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS"
+    },
+    {
+      "check": "Exists: processed",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed"
+    },
+    {
+      "check": "Exists: preprocessing_result",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\results\\preprocessing_result"
+    },
+    {
+      "check": "Exists: feature_manifest.json",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\results\\preprocessing_result\\feature_manifest.json"
+    },
+    {
+      "check": "Exists: preprocessing_summary.json",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\results\\preprocessing_result\\preprocessing_summary.json"
+    },
+    {
+      "check": "Exists: training_medians.csv",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\results\\preprocessing_result\\training_medians.csv"
+    },
+    {
+      "check": "Exists: imputation_statistics.csv",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\results\\preprocessing_result\\imputation_statistics.csv"
+    },
+    {
+      "check": "Exists: split_indices.npz",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\splits\\split_indices.npz"
+    },
+    {
+      "check": "Manifest contains F0/F1/F2/F3",
+      "status": "PASS",
+      "detail": "Found: ['F0', 'F1', 'F2', 'F3']"
+    },
+    {
+      "check": "F0 feature count",
+      "status": "PASS",
+      "detail": "Expected 80, found 80"
+    },
+    {
+      "check": "F0 feature names unique",
+      "status": "PASS",
+      "detail": "80 names"
+    },
+    {
+      "check": "F1 feature count",
+      "status": "PASS",
+      "detail": "Expected 152, found 152"
+    },
+    {
+      "check": "F1 feature names unique",
+      "status": "PASS",
+      "detail": "152 names"
+    },
+    {
+      "check": "F2 feature count",
+      "status": "PASS",
+      "detail": "Expected 296, found 296"
+    },
+    {
+      "check": "F2 feature names unique",
+      "status": "PASS",
+      "detail": "296 names"
+    },
+    {
+      "check": "F3 feature count",
+      "status": "PASS",
+      "detail": "Expected 306, found 306"
+    },
+    {
+      "check": "F3 feature names unique",
+      "status": "PASS",
+      "detail": "306 names"
+    },
+    {
+      "check": "F0 is subset of F1",
+      "status": "PASS",
+      "detail": "All previous features retained."
+    },
+    {
+      "check": "F1 is subset of F2",
+      "status": "PASS",
+      "detail": "All previous features retained."
+    },
+    {
+      "check": "F2 is subset of F3",
+      "status": "PASS",
+      "detail": "All previous features retained."
+    },
+    {
+      "check": "F0/train/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\train\\X.npy"
+    },
+    {
+      "check": "F0/train/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\train\\labels.npy"
+    },
+    {
+      "check": "F0/train/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\train\\patient_offsets.npy"
+    },
+    {
+      "check": "F0/train/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\train\\patient_keys.npy"
+    },
+    {
+      "check": "F0/train/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\train\\feature_names.json"
+    },
+    {
+      "check": "F0/train feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (1057665, 80)"
+    },
+    {
+      "check": "F0/train labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (1057665,)"
+    },
+    {
+      "check": "F0/train offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (27428,)"
+    },
+    {
+      "check": "F0/train patient count",
+      "status": "PASS",
+      "detail": "Expected 27427, found 27427"
+    },
+    {
+      "check": "F0/train feature names count",
+      "status": "PASS",
+      "detail": "Expected 80, found 80"
+    },
+    {
+      "check": "F0/train feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F0/train no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F0/train labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F0/train offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=1057665, rows=1057665"
+    },
+    {
+      "check": "F0/train patient keys unique",
+      "status": "PASS",
+      "detail": "27427/27427 unique"
+    },
+    {
+      "check": "F0/validation/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\validation\\X.npy"
+    },
+    {
+      "check": "F0/validation/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\validation\\labels.npy"
+    },
+    {
+      "check": "F0/validation/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\validation\\patient_offsets.npy"
+    },
+    {
+      "check": "F0/validation/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\validation\\patient_keys.npy"
+    },
+    {
+      "check": "F0/validation/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\validation\\feature_names.json"
+    },
+    {
+      "check": "F0/validation feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (182553, 80)"
+    },
+    {
+      "check": "F0/validation labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (182553,)"
+    },
+    {
+      "check": "F0/validation offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (4842,)"
+    },
+    {
+      "check": "F0/validation patient count",
+      "status": "PASS",
+      "detail": "Expected 4841, found 4841"
+    },
+    {
+      "check": "F0/validation feature names count",
+      "status": "PASS",
+      "detail": "Expected 80, found 80"
+    },
+    {
+      "check": "F0/validation feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F0/validation no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F0/validation labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F0/validation offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=182553, rows=182553"
+    },
+    {
+      "check": "F0/validation patient keys unique",
+      "status": "PASS",
+      "detail": "4841/4841 unique"
+    },
+    {
+      "check": "F0/test/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\test\\X.npy"
+    },
+    {
+      "check": "F0/test/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\test\\labels.npy"
+    },
+    {
+      "check": "F0/test/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\test\\patient_offsets.npy"
+    },
+    {
+      "check": "F0/test/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\test\\patient_keys.npy"
+    },
+    {
+      "check": "F0/test/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\test\\feature_names.json"
+    },
+    {
+      "check": "F0/test feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (311992, 80)"
+    },
+    {
+      "check": "F0/test labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (311992,)"
+    },
+    {
+      "check": "F0/test offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (8069,)"
+    },
+    {
+      "check": "F0/test patient count",
+      "status": "PASS",
+      "detail": "Expected 8068, found 8068"
+    },
+    {
+      "check": "F0/test feature names count",
+      "status": "PASS",
+      "detail": "Expected 80, found 80"
+    },
+    {
+      "check": "F0/test feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F0/test no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F0/test labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F0/test offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=311992, rows=311992"
+    },
+    {
+      "check": "F0/test patient keys unique",
+      "status": "PASS",
+      "detail": "8068/8068 unique"
+    },
+    {
+      "check": "F1/train/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\train\\X.npy"
+    },
+    {
+      "check": "F1/train/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\train\\labels.npy"
+    },
+    {
+      "check": "F1/train/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\train\\patient_offsets.npy"
+    },
+    {
+      "check": "F1/train/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\train\\patient_keys.npy"
+    },
+    {
+      "check": "F1/train/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\train\\feature_names.json"
+    },
+    {
+      "check": "F1/train feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (1057665, 152)"
+    },
+    {
+      "check": "F1/train labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (1057665,)"
+    },
+    {
+      "check": "F1/train offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (27428,)"
+    },
+    {
+      "check": "F1/train patient count",
+      "status": "PASS",
+      "detail": "Expected 27427, found 27427"
+    },
+    {
+      "check": "F1/train feature names count",
+      "status": "PASS",
+      "detail": "Expected 152, found 152"
+    },
+    {
+      "check": "F1/train feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F1/train no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F1/train labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F1/train offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=1057665, rows=1057665"
+    },
+    {
+      "check": "F1/train patient keys unique",
+      "status": "PASS",
+      "detail": "27427/27427 unique"
+    },
+    {
+      "check": "F1/validation/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\validation\\X.npy"
+    },
+    {
+      "check": "F1/validation/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\validation\\labels.npy"
+    },
+    {
+      "check": "F1/validation/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\validation\\patient_offsets.npy"
+    },
+    {
+      "check": "F1/validation/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\validation\\patient_keys.npy"
+    },
+    {
+      "check": "F1/validation/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\validation\\feature_names.json"
+    },
+    {
+      "check": "F1/validation feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (182553, 152)"
+    },
+    {
+      "check": "F1/validation labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (182553,)"
+    },
+    {
+      "check": "F1/validation offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (4842,)"
+    },
+    {
+      "check": "F1/validation patient count",
+      "status": "PASS",
+      "detail": "Expected 4841, found 4841"
+    },
+    {
+      "check": "F1/validation feature names count",
+      "status": "PASS",
+      "detail": "Expected 152, found 152"
+    },
+    {
+      "check": "F1/validation feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F1/validation no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F1/validation labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F1/validation offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=182553, rows=182553"
+    },
+    {
+      "check": "F1/validation patient keys unique",
+      "status": "PASS",
+      "detail": "4841/4841 unique"
+    },
+    {
+      "check": "F1/test/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\test\\X.npy"
+    },
+    {
+      "check": "F1/test/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\test\\labels.npy"
+    },
+    {
+      "check": "F1/test/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\test\\patient_offsets.npy"
+    },
+    {
+      "check": "F1/test/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\test\\patient_keys.npy"
+    },
+    {
+      "check": "F1/test/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\test\\feature_names.json"
+    },
+    {
+      "check": "F1/test feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (311992, 152)"
+    },
+    {
+      "check": "F1/test labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (311992,)"
+    },
+    {
+      "check": "F1/test offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (8069,)"
+    },
+    {
+      "check": "F1/test patient count",
+      "status": "PASS",
+      "detail": "Expected 8068, found 8068"
+    },
+    {
+      "check": "F1/test feature names count",
+      "status": "PASS",
+      "detail": "Expected 152, found 152"
+    },
+    {
+      "check": "F1/test feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F1/test no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F1/test labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F1/test offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=311992, rows=311992"
+    },
+    {
+      "check": "F1/test patient keys unique",
+      "status": "PASS",
+      "detail": "8068/8068 unique"
+    },
+    {
+      "check": "F2/train/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\train\\X.npy"
+    },
+    {
+      "check": "F2/train/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\train\\labels.npy"
+    },
+    {
+      "check": "F2/train/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\train\\patient_offsets.npy"
+    },
+    {
+      "check": "F2/train/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\train\\patient_keys.npy"
+    },
+    {
+      "check": "F2/train/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\train\\feature_names.json"
+    },
+    {
+      "check": "F2/train feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (1057665, 296)"
+    },
+    {
+      "check": "F2/train labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (1057665,)"
+    },
+    {
+      "check": "F2/train offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (27428,)"
+    },
+    {
+      "check": "F2/train patient count",
+      "status": "PASS",
+      "detail": "Expected 27427, found 27427"
+    },
+    {
+      "check": "F2/train feature names count",
+      "status": "PASS",
+      "detail": "Expected 296, found 296"
+    },
+    {
+      "check": "F2/train feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F2/train no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F2/train labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F2/train offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=1057665, rows=1057665"
+    },
+    {
+      "check": "F2/train patient keys unique",
+      "status": "PASS",
+      "detail": "27427/27427 unique"
+    },
+    {
+      "check": "F2/validation/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\validation\\X.npy"
+    },
+    {
+      "check": "F2/validation/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\validation\\labels.npy"
+    },
+    {
+      "check": "F2/validation/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\validation\\patient_offsets.npy"
+    },
+    {
+      "check": "F2/validation/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\validation\\patient_keys.npy"
+    },
+    {
+      "check": "F2/validation/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\validation\\feature_names.json"
+    },
+    {
+      "check": "F2/validation feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (182553, 296)"
+    },
+    {
+      "check": "F2/validation labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (182553,)"
+    },
+    {
+      "check": "F2/validation offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (4842,)"
+    },
+    {
+      "check": "F2/validation patient count",
+      "status": "PASS",
+      "detail": "Expected 4841, found 4841"
+    },
+    {
+      "check": "F2/validation feature names count",
+      "status": "PASS",
+      "detail": "Expected 296, found 296"
+    },
+    {
+      "check": "F2/validation feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F2/validation no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F2/validation labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F2/validation offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=182553, rows=182553"
+    },
+    {
+      "check": "F2/validation patient keys unique",
+      "status": "PASS",
+      "detail": "4841/4841 unique"
+    },
+    {
+      "check": "F2/test/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\test\\X.npy"
+    },
+    {
+      "check": "F2/test/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\test\\labels.npy"
+    },
+    {
+      "check": "F2/test/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\test\\patient_offsets.npy"
+    },
+    {
+      "check": "F2/test/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\test\\patient_keys.npy"
+    },
+    {
+      "check": "F2/test/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\test\\feature_names.json"
+    },
+    {
+      "check": "F2/test feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (311992, 296)"
+    },
+    {
+      "check": "F2/test labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (311992,)"
+    },
+    {
+      "check": "F2/test offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (8069,)"
+    },
+    {
+      "check": "F2/test patient count",
+      "status": "PASS",
+      "detail": "Expected 8068, found 8068"
+    },
+    {
+      "check": "F2/test feature names count",
+      "status": "PASS",
+      "detail": "Expected 296, found 296"
+    },
+    {
+      "check": "F2/test feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F2/test no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F2/test labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F2/test offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=311992, rows=311992"
+    },
+    {
+      "check": "F2/test patient keys unique",
+      "status": "PASS",
+      "detail": "8068/8068 unique"
+    },
+    {
+      "check": "F3/train/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\train\\X.npy"
+    },
+    {
+      "check": "F3/train/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\train\\labels.npy"
+    },
+    {
+      "check": "F3/train/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\train\\patient_offsets.npy"
+    },
+    {
+      "check": "F3/train/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\train\\patient_keys.npy"
+    },
+    {
+      "check": "F3/train/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\train\\feature_names.json"
+    },
+    {
+      "check": "F3/train feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (1057665, 306)"
+    },
+    {
+      "check": "F3/train labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (1057665,)"
+    },
+    {
+      "check": "F3/train offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (27428,)"
+    },
+    {
+      "check": "F3/train patient count",
+      "status": "PASS",
+      "detail": "Expected 27427, found 27427"
+    },
+    {
+      "check": "F3/train feature names count",
+      "status": "PASS",
+      "detail": "Expected 306, found 306"
+    },
+    {
+      "check": "F3/train feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F3/train no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F3/train labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F3/train offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=1057665, rows=1057665"
+    },
+    {
+      "check": "F3/train patient keys unique",
+      "status": "PASS",
+      "detail": "27427/27427 unique"
+    },
+    {
+      "check": "F3/validation/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\validation\\X.npy"
+    },
+    {
+      "check": "F3/validation/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\validation\\labels.npy"
+    },
+    {
+      "check": "F3/validation/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\validation\\patient_offsets.npy"
+    },
+    {
+      "check": "F3/validation/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\validation\\patient_keys.npy"
+    },
+    {
+      "check": "F3/validation/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\validation\\feature_names.json"
+    },
+    {
+      "check": "F3/validation feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (182553, 306)"
+    },
+    {
+      "check": "F3/validation labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (182553,)"
+    },
+    {
+      "check": "F3/validation offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (4842,)"
+    },
+    {
+      "check": "F3/validation patient count",
+      "status": "PASS",
+      "detail": "Expected 4841, found 4841"
+    },
+    {
+      "check": "F3/validation feature names count",
+      "status": "PASS",
+      "detail": "Expected 306, found 306"
+    },
+    {
+      "check": "F3/validation feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F3/validation no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F3/validation labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F3/validation offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=182553, rows=182553"
+    },
+    {
+      "check": "F3/validation patient keys unique",
+      "status": "PASS",
+      "detail": "4841/4841 unique"
+    },
+    {
+      "check": "F3/test/X exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\test\\X.npy"
+    },
+    {
+      "check": "F3/test/labels exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\test\\labels.npy"
+    },
+    {
+      "check": "F3/test/offsets exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\test\\patient_offsets.npy"
+    },
+    {
+      "check": "F3/test/keys exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\test\\patient_keys.npy"
+    },
+    {
+      "check": "F3/test/feature_names exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\test\\feature_names.json"
+    },
+    {
+      "check": "F3/test feature dimension",
+      "status": "PASS",
+      "detail": "X shape = (311992, 306)"
+    },
+    {
+      "check": "F3/test labels dimension",
+      "status": "PASS",
+      "detail": "labels shape = (311992,)"
+    },
+    {
+      "check": "F3/test offsets dimension",
+      "status": "PASS",
+      "detail": "offsets shape = (8069,)"
+    },
+    {
+      "check": "F3/test patient count",
+      "status": "PASS",
+      "detail": "Expected 8068, found 8068"
+    },
+    {
+      "check": "F3/test feature names count",
+      "status": "PASS",
+      "detail": "Expected 306, found 306"
+    },
+    {
+      "check": "F3/test feature names match manifest",
+      "status": "PASS",
+      "detail": "Processed feature names match manifest."
+    },
+    {
+      "check": "F3/test no NaN/Inf",
+      "status": "PASS",
+      "detail": "All processed feature values are finite."
+    },
+    {
+      "check": "F3/test labels binary",
+      "status": "PASS",
+      "detail": "Unique labels: [0, 1]"
+    },
+    {
+      "check": "F3/test offsets valid",
+      "status": "PASS",
+      "detail": "First=0, last=311992, rows=311992"
+    },
+    {
+      "check": "F3/test patient keys unique",
+      "status": "PASS",
+      "detail": "8068/8068 unique"
+    },
+    {
+      "check": "F0 train/validation disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F0 train/test disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F0 validation/test disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F1 train/validation disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F1 train/test disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F1 validation/test disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F2 train/validation disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F2 train/test disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F2 validation/test disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F3 train/validation disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F3 train/test disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "F3 validation/test disjoint",
+      "status": "PASS",
+      "detail": "Overlap: 0"
+    },
+    {
+      "check": "train: F0 vs F1 patient order",
+      "status": "PASS",
+      "detail": "Patient ordering is identical."
+    },
+    {
+      "check": "train: F0 vs F1 sequence lengths",
+      "status": "PASS",
+      "detail": "Patient sequence lengths are identical."
+    },
+    {
+      "check": "train: F0 vs F1 labels",
+      "status": "PASS",
+      "detail": "Hourly labels are identical."
+    },
+    {
+      "check": "train: F0 vs F2 patient order",
+      "status": "PASS",
+      "detail": "Patient ordering is identical."
+    },
+    {
+      "check": "train: F0 vs F2 sequence lengths",
+      "status": "PASS",
+      "detail": "Patient sequence lengths are identical."
+    },
+    {
+      "check": "train: F0 vs F2 labels",
+      "status": "PASS",
+      "detail": "Hourly labels are identical."
+    },
+    {
+      "check": "train: F0 vs F3 patient order",
+      "status": "PASS",
+      "detail": "Patient ordering is identical."
+    },
+    {
+      "check": "train: F0 vs F3 sequence lengths",
+      "status": "PASS",
+      "detail": "Patient sequence lengths are identical."
+    },
+    {
+      "check": "train: F0 vs F3 labels",
+      "status": "PASS",
+      "detail": "Hourly labels are identical."
+    },
+    {
+      "check": "validation: F0 vs F1 patient order",
+      "status": "PASS",
+      "detail": "Patient ordering is identical."
+    },
+    {
+      "check": "validation: F0 vs F1 sequence lengths",
+      "status": "PASS",
+      "detail": "Patient sequence lengths are identical."
+    },
+    {
+      "check": "validation: F0 vs F1 labels",
+      "status": "PASS",
+      "detail": "Hourly labels are identical."
+    },
+    {
+      "check": "validation: F0 vs F2 patient order",
+      "status": "PASS",
+      "detail": "Patient ordering is identical."
+    },
+    {
+      "check": "validation: F0 vs F2 sequence lengths",
+      "status": "PASS",
+      "detail": "Patient sequence lengths are identical."
+    },
+    {
+      "check": "validation: F0 vs F2 labels",
+      "status": "PASS",
+      "detail": "Hourly labels are identical."
+    },
+    {
+      "check": "validation: F0 vs F3 patient order",
+      "status": "PASS",
+      "detail": "Patient ordering is identical."
+    },
+    {
+      "check": "validation: F0 vs F3 sequence lengths",
+      "status": "PASS",
+      "detail": "Patient sequence lengths are identical."
+    },
+    {
+      "check": "validation: F0 vs F3 labels",
+      "status": "PASS",
+      "detail": "Hourly labels are identical."
+    },
+    {
+      "check": "test: F0 vs F1 patient order",
+      "status": "PASS",
+      "detail": "Patient ordering is identical."
+    },
+    {
+      "check": "test: F0 vs F1 sequence lengths",
+      "status": "PASS",
+      "detail": "Patient sequence lengths are identical."
+    },
+    {
+      "check": "test: F0 vs F1 labels",
+      "status": "PASS",
+      "detail": "Hourly labels are identical."
+    },
+    {
+      "check": "test: F0 vs F2 patient order",
+      "status": "PASS",
+      "detail": "Patient ordering is identical."
+    },
+    {
+      "check": "test: F0 vs F2 sequence lengths",
+      "status": "PASS",
+      "detail": "Patient sequence lengths are identical."
+    },
+    {
+      "check": "test: F0 vs F2 labels",
+      "status": "PASS",
+      "detail": "Hourly labels are identical."
+    },
+    {
+      "check": "test: F0 vs F3 patient order",
+      "status": "PASS",
+      "detail": "Patient ordering is identical."
+    },
+    {
+      "check": "test: F0 vs F3 sequence lengths",
+      "status": "PASS",
+      "detail": "Patient sequence lengths are identical."
+    },
+    {
+      "check": "test: F0 vs F3 labels",
+      "status": "PASS",
+      "detail": "Hourly labels are identical."
+    },
+    {
+      "check": "F1 contains temporal delta features",
+      "status": "PASS",
+      "detail": "Found 72 delta-related features."
+    },
+    {
+      "check": "F2 adds rolling/statistical features",
+      "status": "PASS",
+      "detail": "Found 144 rolling/statistical features."
+    },
+    {
+      "check": "F3 contains expected clinical features",
+      "status": "PASS",
+      "detail": "Found: ['BUN_Creatinine_ratio', 'MEWS_4_variable', 'O2Sat_FiO2_ratio', 'SIRS_score', 'ShockIndex_HR_SBP']"
+    },
+    {
+      "check": "Training medians file exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\results\\preprocessing_result\\training_medians.csv"
+    },
+    {
+      "check": "Imputation statistics file exists",
+      "status": "PASS",
+      "detail": "D:\\CAPSTONE\\SEPSIS\\results\\preprocessing_result\\imputation_statistics.csv"
+    },
+    {
+      "check": "Summary states train-only median fitting",
+      "status": "PASS",
+      "detail": "Training patients only"
+    },
+    {
+      "check": "Summary states causal forward-fill",
+      "status": "PASS",
+      "detail": "Within patient only"
+    },
+    {
+      "check": "Summary F0 count",
+      "status": "PASS",
+      "detail": "Expected 80, summary reports 80"
+    },
+    {
+      "check": "Summary F1 count",
+      "status": "PASS",
+      "detail": "Expected 152, summary reports 152"
+    },
+    {
+      "check": "Summary F2 count",
+      "status": "PASS",
+      "detail": "Expected 296, summary reports 296"
+    },
+    {
+      "check": "Summary F3 count",
+      "status": "PASS",
+      "detail": "Expected 306, summary reports 306"
+    },
+    {
+      "check": "Raw training data marked unmodified",
+      "status": "PASS",
+      "detail": "False"
+    },
+    {
+      "check": "Future information explicitly rejected",
+      "status": "PASS",
+      "detail": "False"
+    }
+  ],
+  "failures": [],
+  "warnings_detail": []
+}

@@ -1,0 +1,65 @@
+{
+    "patients": 40336,
+    "rows": 1552210,
+    "patients_by_class": {
+        "sepsis": 2932,
+        "non_sepsis": 37404
+    },
+    "rows_by_class": {
+        "sepsis": 172410,
+        "non_sepsis": 1379800
+    },
+    "timesteps": {
+        "positive": 27916,
+        "negative": 1524294,
+        "total": 1552210
+    },
+    "label_checks": {
+        "patients_with_nonbinary_labels": 0,
+        "patients_with_label_transition_back": 0
+    },
+    "duplicate_rows": {
+        "patients_with_duplicates": 0,
+        "total_duplicate_rows": 0
+    },
+    "range_checks": {
+        "HR": 0,
+        "O2Sat": 0,
+        "Temp": 2,
+        "SBP": 0,
+        "MAP": 201,
+        "DBP": 103,
+        "Resp": 0,
+        "EtCO2": 0,
+        "FiO2": 23,
+        "pH": 0,
+        "PaCO2": 0,
+        "SaO2": 0,
+        "AST": 0,
+        "BUN": 0,
+        "Calcium": 16,
+        "Chloride": 0,
+        "Creatinine": 2,
+        "Glucose": 0,
+        "Lactate": 1,
+        "Magnesium": 0,
+        "Phosphate": 0,
+        "Potassium": 1,
+        "Hct": 0,
+        "Hgb": 1,
+        "WBC": 9,
+        "Platelets": 1,
+        "Age": 0,
+        "Gender": 0,
+        "Unit1": 0,
+        "Unit2": 0,
+        "ICULOS": 0,
+        "SepsisLabel": 0
+    },
+    "files": {
+        "missingness": "D:\\CAPSTONE\\SEPSIS\\results\\full_dataset_missingness.csv",
+        "patient_lengths": "D:\\CAPSTONE\\SEPSIS\\results\\patient_length_by_class.csv",
+        "patient_audit": "D:\\CAPSTONE\\SEPSIS\\results\\full_dataset_patient_audit.csv",
+        "range_violations": "D:\\CAPSTONE\\SEPSIS\\results\\range_violations.csv"
+    }
+}

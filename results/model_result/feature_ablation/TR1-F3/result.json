@@ -1,0 +1,89 @@
+{
+  "experiment_id": "TR1-F3",
+  "family": "TRANSFORMER",
+  "feature_set": "F3",
+  "input_features": 306,
+  "configuration": {
+    "id": "TR1-F3",
+    "family": "TRANSFORMER",
+    "feature_set": "F3",
+    "d_model": 64,
+    "nhead": 4,
+    "num_layers": 2,
+    "dim_feedforward": 128,
+    "dropout": 0.1,
+    "lr": 0.001
+  },
+  "seed": 42,
+  "epochs": 5,
+  "batch_size": 128,
+  "pos_weight": 54.734,
+  "best_epoch": 3,
+  "validation": {
+    "loss": 1.1494703135992352,
+    "AUROC": 0.7728948867600977,
+    "AUPRC": 0.07952819705016599,
+    "F1": 0.15912897822445563,
+    "Precision": 0.11535348084187803,
+    "Sensitivity": 0.2564487102579484,
+    "Specificity": 0.9634134773656811,
+    "Threshold": 0.74,
+    "TN": 172662,
+    "FP": 6557,
+    "FN": 2479,
+    "TP": 855
+  },
+  "test": {
+    "loss": 1.1088413810357451,
+    "AUROC": 0.7756602142584786,
+    "AUPRC": 0.08107316675610349,
+    "F1": 0.16167949083309585,
+    "Precision": 0.11016894297365526,
+    "Sensitivity": 0.30365744870651207,
+    "Specificity": 0.9551319083381475,
+    "Threshold": 0.74,
+    "TN": 292640,
+    "FP": 13747,
+    "FN": 3903,
+    "TP": 1702
+  },
+  "runtime_seconds": 192.08086466789246,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.243875005633332,
+      "val_loss": 1.190928545437361,
+      "val_AUPRC": 0.07891263552361816,
+      "val_AUROC": 0.7426324066228664
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.1746206000793813,
+      "val_loss": 1.1937217837885807,
+      "val_AUPRC": 0.07517797619519204,
+      "val_AUROC": 0.7500099921986042
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.1399069639139396,
+      "val_loss": 1.1494703135992352,
+      "val_AUPRC": 0.07952819705016599,
+      "val_AUROC": 0.7728948867600977
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.125172283483106,
+      "val_loss": 1.2469903183610815,
+      "val_AUPRC": 0.07020157761337918,
+      "val_AUROC": 0.7563379057207937
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.1125759540602218,
+      "val_loss": 1.1851956577677476,
+      "val_AUPRC": 0.0791490425565217,
+      "val_AUROC": 0.781745777293188
+    }
+  ],
+  "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\TR1-F3\\best_model.pt"
+}

@@ -1,0 +1,50 @@
+{
+  "stage": "3.3",
+  "family": "GRU",
+  "experiment": {
+    "id": "GRU-4",
+    "hidden_size": 128,
+    "num_layers": 2,
+    "dropout": 0.2,
+    "learning_rate": 0.0005
+  },
+  "feature_set": "F0",
+  "seed": 42,
+  "batch_size": 128,
+  "epochs": 15,
+  "weight_decay": 0.0001,
+  "gradient_clip": 1.0,
+  "positive_weight": 54.73404647731464,
+  "best_epoch": 12,
+  "best_validation_AUPRC": 0.08025986232107134,
+  "validation": {
+    "AUROC": 0.7498803873326629,
+    "AUPRC": 0.08025986232107134,
+    "F1": 0.15795868772782504,
+    "Precision": 0.11922959339651483,
+    "Sensitivity": 0.23395320935812838,
+    "Specificity": 0.9678493909685915,
+    "TN": 173457,
+    "FP": 5762,
+    "FN": 2554,
+    "TP": 780,
+    "Threshold": 0.85
+  },
+  "test": {
+    "AUROC": 0.7590672786311046,
+    "AUPRC": 0.07297621419484315,
+    "F1": 0.17019588395735186,
+    "Precision": 0.11785714285714285,
+    "Sensitivity": 0.3061552185548617,
+    "Specificity": 0.9580791613221188,
+    "TN": 293543,
+    "FP": 12844,
+    "FN": 3889,
+    "TP": 1716,
+    "Threshold": 0.85
+  },
+  "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\gru_family\\gru-4.pt",
+  "test_predictions": "D:\\CAPSTONE\\SEPSIS\\results\\model_result\\gru_family\\gru-4_test_predictions.npz",
+  "reconstructed_without_training": true,
+  "completed_at": "2026-10-04 20:00:17"
+}

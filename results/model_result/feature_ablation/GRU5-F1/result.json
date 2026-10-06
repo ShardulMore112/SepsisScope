@@ -1,0 +1,87 @@
+{
+  "experiment_id": "GRU5-F1",
+  "family": "GRU",
+  "feature_set": "F1",
+  "input_features": 152,
+  "configuration": {
+    "id": "GRU5-F1",
+    "family": "GRU",
+    "feature_set": "F1",
+    "hidden": 256,
+    "layers": 2,
+    "dropout": 0.2,
+    "lr": 0.0005
+  },
+  "seed": 42,
+  "epochs": 5,
+  "batch_size": 128,
+  "pos_weight": 54.734,
+  "best_epoch": 2,
+  "validation": {
+    "loss": 1.1730486138870841,
+    "AUROC": 0.7568590874530108,
+    "AUPRC": 0.07057115332986544,
+    "F1": 0.1591737545565006,
+    "Precision": 0.12014674411494956,
+    "Sensitivity": 0.235752849430114,
+    "Specificity": 0.967882869561821,
+    "Threshold": 0.78,
+    "TN": 173463,
+    "FP": 5756,
+    "FN": 2548,
+    "TP": 786
+  },
+  "test": {
+    "loss": 1.124249073676765,
+    "AUROC": 0.7674554660507646,
+    "AUPRC": 0.07639911339271258,
+    "F1": 0.16400206291903044,
+    "Precision": 0.11534276387377584,
+    "Sensitivity": 0.2836752899197145,
+    "Specificity": 0.960197397409159,
+    "Threshold": 0.78,
+    "TN": 294192,
+    "FP": 12195,
+    "FN": 4015,
+    "TP": 1590
+  },
+  "runtime_seconds": 100.13316440582275,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.240696960549022,
+      "val_loss": 1.2133588273274272,
+      "val_AUPRC": 0.06158694915036464,
+      "val_AUROC": 0.7260599255840026
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.1823243429494459,
+      "val_loss": 1.1730486138870841,
+      "val_AUPRC": 0.07057115332986544,
+      "val_AUROC": 0.7568590874530108
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.1593806128169215,
+      "val_loss": 1.180378452727669,
+      "val_AUPRC": 0.06765315656493939,
+      "val_AUROC": 0.7517234203743174
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.1638857378516085,
+      "val_loss": 1.1706280300491734,
+      "val_AUPRC": 0.06689346388641933,
+      "val_AUROC": 0.757129400650539
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.151985890920772,
+      "val_loss": 1.1655206743039583,
+      "val_AUPRC": 0.06854536192673785,
+      "val_AUROC": 0.76532989536989
+    }
+  ],
+  "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\GRU5-F1\\best_model.pt"
+}

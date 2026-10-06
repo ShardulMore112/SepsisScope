@@ -1,0 +1,50 @@
+{
+  "stage": "3.4",
+  "family": "LSTM",
+  "experiment": {
+    "id": "LSTM-1",
+    "hidden_size": 64,
+    "num_layers": 1,
+    "dropout": 0.0,
+    "learning_rate": 0.001
+  },
+  "feature_set": "F0",
+  "seed": 42,
+  "batch_size": 128,
+  "epochs": 15,
+  "weight_decay": 0.0001,
+  "gradient_clip": 1.0,
+  "positive_weight": 54.73404647731464,
+  "best_epoch": 10,
+  "best_validation_AUPRC": 0.06963865253266595,
+  "validation": {
+    "AUROC": 0.7380261193812159,
+    "AUPRC": 0.06963865253266595,
+    "F1": 0.1536746071971617,
+    "Precision": 0.11606185882713214,
+    "Sensitivity": 0.22735452909418116,
+    "Specificity": 0.9677880135476707,
+    "TN": 173446,
+    "FP": 5773,
+    "FN": 2576,
+    "TP": 758,
+    "Threshold": 0.76
+  },
+  "test": {
+    "AUROC": 0.7493764992783276,
+    "AUPRC": 0.0723824118626453,
+    "F1": 0.165729625690118,
+    "Precision": 0.11571650869995756,
+    "Sensitivity": 0.2918822479928635,
+    "Specificity": 0.9591953966715298,
+    "TN": 293885,
+    "FP": 12502,
+    "FN": 3969,
+    "TP": 1636,
+    "Threshold": 0.76
+  },
+  "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\lstm_family\\lstm-1.pt",
+  "test_predictions": "D:\\CAPSTONE\\SEPSIS\\results\\model_result\\lstm_family\\lstm-1_test_predictions.npz",
+  "reconstructed_without_training": false,
+  "completed_at": "2026-10-04 20:04:47"
+}

@@ -1,0 +1,62 @@
+{
+  "stage": "3.2.1",
+  "feature_set": "F0",
+  "seed": 42,
+  "summary_statistics": [
+    "mean",
+    "std",
+    "min",
+    "max",
+    "first",
+    "last",
+    "delta"
+  ],
+  "scaling": {
+    "method": "StandardScaler",
+    "fit_on": "training_split_only"
+  },
+  "train_patients": 27427,
+  "validation_patients": 4841,
+  "test_patients": 8068,
+  "train_positive_patients": 1994,
+  "validation_positive_patients": 352,
+  "test_positive_patients": 586,
+  "majority_baseline": {
+    "model": "majority_class",
+    "training_positive_rate": 0.0727020818901083,
+    "validation_AUPRC": 0.07271224953522,
+    "test_AUPRC": 0.07263262270699058
+  },
+  "logistic_regression": {
+    "solver": "lbfgs",
+    "class_weight": "balanced",
+    "max_iter": 5000,
+    "convergence": true,
+    "validation": {
+      "AUROC": 0.8961938526499119,
+      "AUPRC": 0.5245100258803611,
+      "F1": 0.5515320334261838,
+      "Precision": 0.5409836065573771,
+      "Sensitivity": 0.5625,
+      "Specificity": 0.9625751837825797,
+      "TN": 4321,
+      "FP": 168,
+      "FN": 154,
+      "TP": 198,
+      "Threshold": 0.8300000000000001
+    },
+    "test": {
+      "AUROC": 0.8877816429510461,
+      "AUPRC": 0.48474393849780345,
+      "F1": 0.5125709651257097,
+      "Precision": 0.4884080370942813,
+      "Sensitivity": 0.5392491467576792,
+      "Specificity": 0.9557604918470997,
+      "TN": 7151,
+      "FP": 331,
+      "FN": 270,
+      "TP": 316,
+      "Threshold": 0.8300000000000001
+    }
+  }
+}

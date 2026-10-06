@@ -1,0 +1,151 @@
+{
+  "project": "X-FedSepsis",
+  "step": "2",
+  "raw_training_data_modified": false,
+  "split_file": "D:\\CAPSTONE\\SEPSIS\\data\\splits\\split_indices.npz",
+  "feature_counts": {
+    "F0": 80,
+    "F1": 152,
+    "F2": 296,
+    "F3": 306
+  },
+  "feature_sets": {
+    "F0": "Raw clinical variables + missingness indicators",
+    "F1": "F0 + causal 1h/3h/6h deltas + history validity",
+    "F2": "F1 + causal 3h/6h rolling statistics + validity",
+    "F3": "F2 + clinical ratios/scores"
+  },
+  "clinical_features": [
+    "ShockIndex_HR_SBP",
+    "BUN_Creatinine_ratio",
+    "O2Sat_FiO2_ratio",
+    "SIRS_score",
+    "MEWS_4_variable"
+  ],
+  "excluded_scores": [
+    "SOFA",
+    "qSOFA"
+  ],
+  "causality": {
+    "forward_fill": "Within patient only",
+    "deltas": "Current minus historical value",
+    "rolling": "Trailing windows only",
+    "median_imputation": "Training patients only",
+    "future_information": false
+  },
+  "causal_validation": {
+    "status": "passed",
+    "forward_fill": [
+      80.0,
+      80.0,
+      100.0
+    ]
+  },
+  "splits": {
+    "train": {
+      "patients": 27427,
+      "timesteps": 1057665,
+      "positive_timesteps": 18977,
+      "files": {
+        "F0": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\train",
+          "shape": [
+            1057665,
+            80
+          ]
+        },
+        "F1": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\train",
+          "shape": [
+            1057665,
+            152
+          ]
+        },
+        "F2": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\train",
+          "shape": [
+            1057665,
+            296
+          ]
+        },
+        "F3": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\train",
+          "shape": [
+            1057665,
+            306
+          ]
+        }
+      }
+    },
+    "validation": {
+      "patients": 4841,
+      "timesteps": 182553,
+      "positive_timesteps": 3334,
+      "files": {
+        "F0": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\validation",
+          "shape": [
+            182553,
+            80
+          ]
+        },
+        "F1": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\validation",
+          "shape": [
+            182553,
+            152
+          ]
+        },
+        "F2": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\validation",
+          "shape": [
+            182553,
+            296
+          ]
+        },
+        "F3": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\validation",
+          "shape": [
+            182553,
+            306
+          ]
+        }
+      }
+    },
+    "test": {
+      "patients": 8068,
+      "timesteps": 311992,
+      "positive_timesteps": 5605,
+      "files": {
+        "F0": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F0\\test",
+          "shape": [
+            311992,
+            80
+          ]
+        },
+        "F1": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F1\\test",
+          "shape": [
+            311992,
+            152
+          ]
+        },
+        "F2": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F2\\test",
+          "shape": [
+            311992,
+            296
+          ]
+        },
+        "F3": {
+          "path": "D:\\CAPSTONE\\SEPSIS\\data\\processed\\F3\\test",
+          "shape": [
+            311992,
+            306
+          ]
+        }
+      }
+    }
+  }
+}

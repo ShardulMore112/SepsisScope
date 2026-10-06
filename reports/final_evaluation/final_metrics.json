@@ -1,0 +1,92 @@
+{
+  "protocol": {
+    "primary_candidate": "TR1 F0+F1+F2+F3 equal-weight probability ensemble",
+    "selection_metric": "validation AUPRC",
+    "validation_threshold_rule": "maximum validation F1 over 1001 thresholds from 0.0 to 1.0",
+    "frozen_threshold": 0.764,
+    "test_used_for_selection": false,
+    "prior_test_exposure_caveat": true,
+    "feature_ablation_training_budget_caveat": "F1/F2/F3 ablations were screened at 5 epochs whereas F0 family winners used the earlier 15-epoch protocol."
+  },
+  "validation": {
+    "n_timesteps": 182553,
+    "positive_timesteps": 3334,
+    "prevalence": 0.018263189320361757,
+    "AUPRC": 0.08968429210985833,
+    "AUROC": 0.7904402829308649,
+    "F1": 0.16682646212847554
+  },
+  "test_timestep": {
+    "AUPRC": 0.08466560277597761,
+    "AUROC": 0.7939008109964488,
+    "threshold": 0.764,
+    "precision": 0.1224967700258398,
+    "sensitivity": 0.27065120428189116,
+    "F1": 0.16865862471510368,
+    "specificity": 0.9645317849647668,
+    "TN": 295520,
+    "FP": 10867,
+    "FN": 4088,
+    "TP": 1517,
+    "accuracy": 0.9520660786174004
+  },
+  "test_patient": {
+    "n_patients": 8068,
+    "positive_patients": 586,
+    "patient_prevalence": 0.07263262270699058,
+    "TP": 203,
+    "TN": 7312,
+    "FP": 170,
+    "FN": 383,
+    "sensitivity": 0.3464163822525597,
+    "specificity": 0.9772788024592355,
+    "precision": 0.5442359249329759,
+    "F1": 0.4233576642335766,
+    "accuracy": 0.9314576103123451,
+    "AUROC_max_probability": 0.8103662669815975,
+    "AUPRC_max_probability": 0.42342130717519266
+  },
+  "alert_analysis": {
+    "EARLY": 154,
+    "AT_ONSET": 4,
+    "LATE": 45,
+    "MISSED": 383,
+    "FALSE_ALARM": 170,
+    "CLEAN": 7312,
+    "total_alert_timesteps": 12384,
+    "label_positive_alert_timesteps": 1517,
+    "label_negative_alert_timesteps": 10867,
+    "false_alarm_patients": 170,
+    "false_alarm_patient_rate": 0.0227211975407645
+  },
+  "calibration": {
+    "brier_score": 0.1319921225619177,
+    "ECE_10_equal_width_bins": 0.30579553761859385
+  },
+  "bootstrap_patient_cluster_95ci": [
+    {
+      "metric": "patient_AUROC",
+      "estimate": 0.8103662669815975,
+      "ci95_lower": 0.7921260085218774,
+      "ci95_upper": 0.8295383723296449
+    },
+    {
+      "metric": "patient_AUPRC",
+      "estimate": 0.42342130717519266,
+      "ci95_lower": 0.38006176246052886,
+      "ci95_upper": 0.45985498267615976
+    },
+    {
+      "metric": "patient_sensitivity",
+      "estimate": 0.3464163822525597,
+      "ci95_lower": 0.30308200667201557,
+      "ci95_upper": 0.37878948003196095
+    },
+    {
+      "metric": "patient_specificity",
+      "estimate": 0.9772788024592355,
+      "ci95_lower": 0.9739179545980605,
+      "ci95_upper": 0.9804406843077964
+    }
+  ]
+}

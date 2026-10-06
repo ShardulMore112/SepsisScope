@@ -1,0 +1,87 @@
+{
+  "experiment_id": "LSTM4-F2",
+  "family": "LSTM",
+  "feature_set": "F2",
+  "input_features": 296,
+  "configuration": {
+    "id": "LSTM4-F2",
+    "family": "LSTM",
+    "feature_set": "F2",
+    "hidden": 128,
+    "layers": 2,
+    "dropout": 0.2,
+    "lr": 0.0005
+  },
+  "seed": 42,
+  "epochs": 5,
+  "batch_size": 128,
+  "pos_weight": 54.734,
+  "best_epoch": 5,
+  "validation": {
+    "loss": 1.194812879750603,
+    "AUROC": 0.742888857433486,
+    "AUPRC": 0.06506805453785917,
+    "F1": 0.1485951348293419,
+    "Precision": 0.10836083608360836,
+    "Sensitivity": 0.23635272945410918,
+    "Specificity": 0.9638208002499735,
+    "Threshold": 0.84,
+    "TN": 172735,
+    "FP": 6484,
+    "FN": 2546,
+    "TP": 788
+  },
+  "test": {
+    "loss": 1.1189928716048598,
+    "AUROC": 0.76597989988506,
+    "AUPRC": 0.07325064113893752,
+    "F1": 0.15724229999046438,
+    "Precision": 0.10729390331186153,
+    "Sensitivity": 0.29420160570918824,
+    "Specificity": 0.9552200321815221,
+    "Threshold": 0.84,
+    "TN": 292667,
+    "FP": 13720,
+    "FN": 3956,
+    "TP": 1649
+  },
+  "runtime_seconds": 110.93482184410095,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.253468273406805,
+      "val_loss": 1.2677637244525708,
+      "val_AUPRC": 0.05479151486392655,
+      "val_AUROC": 0.7070872784415101
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.2117199739744497,
+      "val_loss": 1.2300535314961483,
+      "val_AUPRC": 0.061280803760376035,
+      "val_AUROC": 0.7189166843032891
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.1811931273271872,
+      "val_loss": 1.2670560588962154,
+      "val_AUPRC": 0.05703189440426191,
+      "val_AUROC": 0.7178425016150107
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.1831568595974944,
+      "val_loss": 1.213127435822236,
+      "val_AUPRC": 0.05880417263071962,
+      "val_AUROC": 0.7240830367452531
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.1697413330854372,
+      "val_loss": 1.194812879750603,
+      "val_AUPRC": 0.06506805453785917,
+      "val_AUROC": 0.742888857433486
+    }
+  ],
+  "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\LSTM4-F2\\best_model.pt"
+}

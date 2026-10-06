@@ -1,0 +1,14 @@
+{
+  "inputs": [
+    "baseline_result/baseline_transformer_f0_test_predictions.npz",
+    "model_result/feature_ablation/TR1-F1/test_predictions.npz",
+    "model_result/feature_ablation/TR1-F2/test_predictions.npz",
+    "model_result/feature_ablation/TR1-F3/test_predictions.npz",
+    "model_result/feature_ablation/TR1-F0/validation_predictions.npz",
+    "model_result/feature_ablation/TR1-F1/validation_predictions.npz",
+    "model_result/feature_ablation/TR1-F2/validation_predictions.npz",
+    "model_result/feature_ablation/TR1-F3/validation_predictions.npz",
+    "data/splits/split_indices.npz",
+    "results/dataset_audit_result/patient_splits.csv"
+  ]
+}

@@ -1,0 +1,978 @@
+{
+  "stage": "3.6",
+  "description": "Controlled causal feature ablation",
+  "experiments_run": 9,
+  "experiments_expected": 9,
+  "F0_retrained": false,
+  "feature_hierarchy": [
+    "F0",
+    "F1",
+    "F2",
+    "F3"
+  ],
+  "existing_F0_baselines": {
+    "GRU": {
+      "model": "GRU-5",
+      "feature_set": "F0",
+      "validation_AUPRC": 0.082515,
+      "test_AUPRC": 0.083072
+    },
+    "LSTM": {
+      "model": "LSTM-4",
+      "feature_set": "F0",
+      "validation_AUPRC": 0.07629,
+      "test_AUPRC": 0.079506
+    },
+    "TRANSFORMER": {
+      "model": "TR-1",
+      "feature_set": "F0",
+      "validation_AUPRC": 0.086798,
+      "test_AUPRC": 0.081869
+    }
+  },
+  "validation_ranking": [
+    {
+      "rank": 1,
+      "experiment": "GRU5-F3",
+      "family": "GRU",
+      "feature_set": "F3",
+      "AUPRC": 0.0801749485310686,
+      "AUROC": 0.7802464002370239,
+      "F1": 0.16386148191139485
+    },
+    {
+      "rank": 2,
+      "experiment": "TR1-F3",
+      "family": "TRANSFORMER",
+      "feature_set": "F3",
+      "AUPRC": 0.07952819705016599,
+      "AUROC": 0.7728948867600977,
+      "F1": 0.15912897822445563
+    },
+    {
+      "rank": 3,
+      "experiment": "GRU5-F2",
+      "family": "GRU",
+      "feature_set": "F2",
+      "AUPRC": 0.07910433664492544,
+      "AUROC": 0.7303011172521521,
+      "F1": 0.15883691029571753
+    },
+    {
+      "rank": 4,
+      "experiment": "TR1-F1",
+      "family": "TRANSFORMER",
+      "feature_set": "F1",
+      "AUPRC": 0.07861027888862487,
+      "AUROC": 0.7711198669433109,
+      "F1": 0.16091329165534113
+    },
+    {
+      "rank": 5,
+      "experiment": "TR1-F2",
+      "family": "TRANSFORMER",
+      "feature_set": "F2",
+      "AUPRC": 0.07575574379020883,
+      "AUROC": 0.7609082658998138,
+      "F1": 0.15544701635166702
+    },
+    {
+      "rank": 6,
+      "experiment": "LSTM4-F3",
+      "family": "LSTM",
+      "feature_set": "F3",
+      "AUPRC": 0.07434909399304943,
+      "AUROC": 0.7526752339843884,
+      "F1": 0.16120365394948952
+    },
+    {
+      "rank": 7,
+      "experiment": "GRU5-F1",
+      "family": "GRU",
+      "feature_set": "F1",
+      "AUPRC": 0.07057115332986544,
+      "AUROC": 0.7568590874530108,
+      "F1": 0.1591737545565006
+    },
+    {
+      "rank": 8,
+      "experiment": "LSTM4-F2",
+      "family": "LSTM",
+      "feature_set": "F2",
+      "AUPRC": 0.06506805453785917,
+      "AUROC": 0.742888857433486,
+      "F1": 0.1485951348293419
+    },
+    {
+      "rank": 9,
+      "experiment": "LSTM4-F1",
+      "family": "LSTM",
+      "feature_set": "F1",
+      "AUPRC": 0.06504612086872134,
+      "AUROC": 0.7393847002420585,
+      "F1": 0.1479062620053784
+    }
+  ],
+  "family_rankings": {
+    "GRU": [
+      {
+        "rank": 1,
+        "feature_set": "F3",
+        "AUPRC": 0.0801749485310686,
+        "AUROC": 0.7802464002370239,
+        "F1": 0.16386148191139485
+      },
+      {
+        "rank": 2,
+        "feature_set": "F2",
+        "AUPRC": 0.07910433664492544,
+        "AUROC": 0.7303011172521521,
+        "F1": 0.15883691029571753
+      },
+      {
+        "rank": 3,
+        "feature_set": "F1",
+        "AUPRC": 0.07057115332986544,
+        "AUROC": 0.7568590874530108,
+        "F1": 0.1591737545565006
+      }
+    ],
+    "LSTM": [
+      {
+        "rank": 1,
+        "feature_set": "F3",
+        "AUPRC": 0.07434909399304943,
+        "AUROC": 0.7526752339843884,
+        "F1": 0.16120365394948952
+      },
+      {
+        "rank": 2,
+        "feature_set": "F2",
+        "AUPRC": 0.06506805453785917,
+        "AUROC": 0.742888857433486,
+        "F1": 0.1485951348293419
+      },
+      {
+        "rank": 3,
+        "feature_set": "F1",
+        "AUPRC": 0.06504612086872134,
+        "AUROC": 0.7393847002420585,
+        "F1": 0.1479062620053784
+      }
+    ],
+    "TRANSFORMER": [
+      {
+        "rank": 1,
+        "feature_set": "F3",
+        "AUPRC": 0.07952819705016599,
+        "AUROC": 0.7728948867600977,
+        "F1": 0.15912897822445563
+      },
+      {
+        "rank": 2,
+        "feature_set": "F1",
+        "AUPRC": 0.07861027888862487,
+        "AUROC": 0.7711198669433109,
+        "F1": 0.16091329165534113
+      },
+      {
+        "rank": 3,
+        "feature_set": "F2",
+        "AUPRC": 0.07575574379020883,
+        "AUROC": 0.7609082658998138,
+        "F1": 0.15544701635166702
+      }
+    ]
+  },
+  "results": [
+    {
+      "experiment_id": "GRU5-F1",
+      "family": "GRU",
+      "feature_set": "F1",
+      "input_features": 152,
+      "configuration": {
+        "id": "GRU5-F1",
+        "family": "GRU",
+        "feature_set": "F1",
+        "hidden": 256,
+        "layers": 2,
+        "dropout": 0.2,
+        "lr": 0.0005
+      },
+      "seed": 42,
+      "epochs": 5,
+      "batch_size": 128,
+      "pos_weight": 54.734,
+      "best_epoch": 2,
+      "validation": {
+        "loss": 1.1730486138870841,
+        "AUROC": 0.7568590874530108,
+        "AUPRC": 0.07057115332986544,
+        "F1": 0.1591737545565006,
+        "Precision": 0.12014674411494956,
+        "Sensitivity": 0.235752849430114,
+        "Specificity": 0.967882869561821,
+        "Threshold": 0.78,
+        "TN": 173463,
+        "FP": 5756,
+        "FN": 2548,
+        "TP": 786
+      },
+      "test": {
+        "loss": 1.124249073676765,
+        "AUROC": 0.7674554660507646,
+        "AUPRC": 0.07639911339271258,
+        "F1": 0.16400206291903044,
+        "Precision": 0.11534276387377584,
+        "Sensitivity": 0.2836752899197145,
+        "Specificity": 0.960197397409159,
+        "Threshold": 0.78,
+        "TN": 294192,
+        "FP": 12195,
+        "FN": 4015,
+        "TP": 1590
+      },
+      "runtime_seconds": 100.13316440582275,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.240696960549022,
+          "val_loss": 1.2133588273274272,
+          "val_AUPRC": 0.06158694915036464,
+          "val_AUROC": 0.7260599255840026
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.1823243429494459,
+          "val_loss": 1.1730486138870841,
+          "val_AUPRC": 0.07057115332986544,
+          "val_AUROC": 0.7568590874530108
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.1593806128169215,
+          "val_loss": 1.180378452727669,
+          "val_AUPRC": 0.06765315656493939,
+          "val_AUROC": 0.7517234203743174
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.1638857378516085,
+          "val_loss": 1.1706280300491734,
+          "val_AUPRC": 0.06689346388641933,
+          "val_AUROC": 0.757129400650539
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.151985890920772,
+          "val_loss": 1.1655206743039583,
+          "val_AUPRC": 0.06854536192673785,
+          "val_AUROC": 0.76532989536989
+        }
+      ],
+      "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\GRU5-F1\\best_model.pt"
+    },
+    {
+      "experiment_id": "GRU5-F2",
+      "family": "GRU",
+      "feature_set": "F2",
+      "input_features": 296,
+      "configuration": {
+        "id": "GRU5-F2",
+        "family": "GRU",
+        "feature_set": "F2",
+        "hidden": 256,
+        "layers": 2,
+        "dropout": 0.2,
+        "lr": 0.0005
+      },
+      "seed": 42,
+      "epochs": 5,
+      "batch_size": 128,
+      "pos_weight": 54.734,
+      "best_epoch": 3,
+      "validation": {
+        "loss": 1.2032900750637054,
+        "AUROC": 0.7303011172521521,
+        "AUPRC": 0.07910433664492544,
+        "F1": 0.15883691029571753,
+        "Precision": 0.11848900693522207,
+        "Sensitivity": 0.24085182963407317,
+        "Specificity": 0.966666480674482,
+        "Threshold": 0.82,
+        "TN": 173245,
+        "FP": 5974,
+        "FN": 2531,
+        "TP": 803
+      },
+      "test": {
+        "loss": 1.1248467662371695,
+        "AUROC": 0.7607162845860282,
+        "AUPRC": 0.07768424161426134,
+        "F1": 0.17107127155488253,
+        "Precision": 0.11778555092156599,
+        "Sensitivity": 0.31239964317573593,
+        "Specificity": 0.9571946590423223,
+        "Threshold": 0.82,
+        "TN": 293272,
+        "FP": 13115,
+        "FN": 3854,
+        "TP": 1751
+      },
+      "runtime_seconds": 120.89222288131714,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.2429201616797336,
+          "val_loss": 1.2244170496338291,
+          "val_AUPRC": 0.06713860105372774,
+          "val_AUROC": 0.7142427788051773
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.1923313942066458,
+          "val_loss": 1.1856941329805475,
+          "val_AUPRC": 0.07346688399932302,
+          "val_AUROC": 0.7502552935197169
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.1660707770391951,
+          "val_loss": 1.2032900750637054,
+          "val_AUPRC": 0.07910433664492544,
+          "val_AUROC": 0.7303011172521521
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.1586288174917532,
+          "val_loss": 1.2446135047234987,
+          "val_AUPRC": 0.07343584116034842,
+          "val_AUROC": 0.74536903309053
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.1496573087780975,
+          "val_loss": 1.2142050140782406,
+          "val_AUPRC": 0.06986967140679691,
+          "val_AUROC": 0.7466893949004686
+        }
+      ],
+      "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\GRU5-F2\\best_model.pt"
+    },
+    {
+      "experiment_id": "GRU5-F3",
+      "family": "GRU",
+      "feature_set": "F3",
+      "input_features": 306,
+      "configuration": {
+        "id": "GRU5-F3",
+        "family": "GRU",
+        "feature_set": "F3",
+        "hidden": 256,
+        "layers": 2,
+        "dropout": 0.2,
+        "lr": 0.0005
+      },
+      "seed": 42,
+      "epochs": 5,
+      "batch_size": 128,
+      "pos_weight": 54.734,
+      "best_epoch": 5,
+      "validation": {
+        "loss": 1.1330192245935138,
+        "AUROC": 0.7802464002370239,
+        "AUPRC": 0.0801749485310686,
+        "F1": 0.16386148191139485,
+        "Precision": 0.12093089663049686,
+        "Sensitivity": 0.2540491901619676,
+        "Specificity": 0.965645383580982,
+        "Threshold": 0.8,
+        "TN": 173062,
+        "FP": 6157,
+        "FN": 2487,
+        "TP": 847
+      },
+      "test": {
+        "loss": 1.1066136807203293,
+        "AUROC": 0.7753942541874046,
+        "AUPRC": 0.07694776055815342,
+        "F1": 0.17276099629040806,
+        "Precision": 0.11833421330517424,
+        "Sensitivity": 0.319892952720785,
+        "Specificity": 0.9563982806059004,
+        "Threshold": 0.8,
+        "TN": 293028,
+        "FP": 13359,
+        "FN": 3812,
+        "TP": 1793
+      },
+      "runtime_seconds": 124.54366946220398,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.2283128613649412,
+          "val_loss": 1.226453224295064,
+          "val_AUPRC": 0.05979791181976707,
+          "val_AUROC": 0.7273259591549179
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.176618021587993,
+          "val_loss": 1.1985598520228737,
+          "val_AUPRC": 0.06987232045916719,
+          "val_AUROC": 0.7505682884090633
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.1364816089009129,
+          "val_loss": 1.2730877148477655,
+          "val_AUPRC": 0.06899560719050404,
+          "val_AUROC": 0.7475438739022795
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.143743274932684,
+          "val_loss": 1.1464106613083889,
+          "val_AUPRC": 0.07227542851924135,
+          "val_AUROC": 0.766578584639619
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.1237053951551748,
+          "val_loss": 1.1330192245935138,
+          "val_AUPRC": 0.0801749485310686,
+          "val_AUROC": 0.7802464002370239
+        }
+      ],
+      "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\GRU5-F3\\best_model.pt"
+    },
+    {
+      "experiment_id": "LSTM4-F1",
+      "family": "LSTM",
+      "feature_set": "F1",
+      "input_features": 152,
+      "configuration": {
+        "id": "LSTM4-F1",
+        "family": "LSTM",
+        "feature_set": "F1",
+        "hidden": 128,
+        "layers": 2,
+        "dropout": 0.2,
+        "lr": 0.0005
+      },
+      "seed": 42,
+      "epochs": 5,
+      "batch_size": 128,
+      "pos_weight": 54.734,
+      "best_epoch": 4,
+      "validation": {
+        "loss": 1.218069514161662,
+        "AUROC": 0.7393847002420585,
+        "AUPRC": 0.06504612086872134,
+        "F1": 0.1479062620053784,
+        "Precision": 0.10878779316191015,
+        "Sensitivity": 0.23095380923815237,
+        "Specificity": 0.9648028389847059,
+        "Threshold": 0.72,
+        "TN": 172911,
+        "FP": 6308,
+        "FN": 2564,
+        "TP": 770
+      },
+      "test": {
+        "loss": 1.140917081385851,
+        "AUROC": 0.7579620300105724,
+        "AUPRC": 0.06846190262030707,
+        "F1": 0.158428088871973,
+        "Precision": 0.10801868431296224,
+        "Sensitivity": 0.2970561998215879,
+        "Specificity": 0.9551253806460457,
+        "Threshold": 0.72,
+        "TN": 292638,
+        "FP": 13749,
+        "FN": 3940,
+        "TP": 1665
+      },
+      "runtime_seconds": 101.3608946800232,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.2446037530899048,
+          "val_loss": 1.2473506253016622,
+          "val_AUPRC": 0.05842411298040291,
+          "val_AUROC": 0.7050712735049673
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.2009607947149943,
+          "val_loss": 1.259143380742324,
+          "val_AUPRC": 0.058484909469888866,
+          "val_AUROC": 0.7229186464527773
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.176711306738299,
+          "val_loss": 1.274779544064873,
+          "val_AUPRC": 0.0576943308919445,
+          "val_AUROC": 0.7241187395461611
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.166812353633171,
+          "val_loss": 1.218069514161662,
+          "val_AUPRC": 0.06504612086872134,
+          "val_AUROC": 0.7393847002420585
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.1513570073039032,
+          "val_loss": 1.2078993022441864,
+          "val_AUPRC": 0.06412081861614433,
+          "val_AUROC": 0.7372072318862493
+        }
+      ],
+      "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\LSTM4-F1\\best_model.pt"
+    },
+    {
+      "experiment_id": "LSTM4-F2",
+      "family": "LSTM",
+      "feature_set": "F2",
+      "input_features": 296,
+      "configuration": {
+        "id": "LSTM4-F2",
+        "family": "LSTM",
+        "feature_set": "F2",
+        "hidden": 128,
+        "layers": 2,
+        "dropout": 0.2,
+        "lr": 0.0005
+      },
+      "seed": 42,
+      "epochs": 5,
+      "batch_size": 128,
+      "pos_weight": 54.734,
+      "best_epoch": 5,
+      "validation": {
+        "loss": 1.194812879750603,
+        "AUROC": 0.742888857433486,
+        "AUPRC": 0.06506805453785917,
+        "F1": 0.1485951348293419,
+        "Precision": 0.10836083608360836,
+        "Sensitivity": 0.23635272945410918,
+        "Specificity": 0.9638208002499735,
+        "Threshold": 0.84,
+        "TN": 172735,
+        "FP": 6484,
+        "FN": 2546,
+        "TP": 788
+      },
+      "test": {
+        "loss": 1.1189928716048598,
+        "AUROC": 0.76597989988506,
+        "AUPRC": 0.07325064113893752,
+        "F1": 0.15724229999046438,
+        "Precision": 0.10729390331186153,
+        "Sensitivity": 0.29420160570918824,
+        "Specificity": 0.9552200321815221,
+        "Threshold": 0.84,
+        "TN": 292667,
+        "FP": 13720,
+        "FN": 3956,
+        "TP": 1649
+      },
+      "runtime_seconds": 110.93482184410095,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.253468273406805,
+          "val_loss": 1.2677637244525708,
+          "val_AUPRC": 0.05479151486392655,
+          "val_AUROC": 0.7070872784415101
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.2117199739744497,
+          "val_loss": 1.2300535314961483,
+          "val_AUPRC": 0.061280803760376035,
+          "val_AUROC": 0.7189166843032891
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.1811931273271872,
+          "val_loss": 1.2670560588962154,
+          "val_AUPRC": 0.05703189440426191,
+          "val_AUROC": 0.7178425016150107
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.1831568595974944,
+          "val_loss": 1.213127435822236,
+          "val_AUPRC": 0.05880417263071962,
+          "val_AUROC": 0.7240830367452531
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.1697413330854372,
+          "val_loss": 1.194812879750603,
+          "val_AUPRC": 0.06506805453785917,
+          "val_AUROC": 0.742888857433486
+        }
+      ],
+      "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\LSTM4-F2\\best_model.pt"
+    },
+    {
+      "experiment_id": "LSTM4-F3",
+      "family": "LSTM",
+      "feature_set": "F3",
+      "input_features": 306,
+      "configuration": {
+        "id": "LSTM4-F3",
+        "family": "LSTM",
+        "feature_set": "F3",
+        "hidden": 128,
+        "layers": 2,
+        "dropout": 0.2,
+        "lr": 0.0005
+      },
+      "seed": 42,
+      "epochs": 5,
+      "batch_size": 128,
+      "pos_weight": 54.734,
+      "best_epoch": 5,
+      "validation": {
+        "loss": 1.2210849554915177,
+        "AUROC": 0.7526752339843884,
+        "AUPRC": 0.07434909399304943,
+        "F1": 0.16120365394948952,
+        "Precision": 0.11491317671092952,
+        "Sensitivity": 0.2699460107978404,
+        "Specificity": 0.9613210652888365,
+        "Threshold": 0.78,
+        "TN": 172287,
+        "FP": 6932,
+        "FN": 2434,
+        "TP": 900
+      },
+      "test": {
+        "loss": 1.1568140522576869,
+        "AUROC": 0.7571449772494062,
+        "AUPRC": 0.07017619698857533,
+        "F1": 0.1611968694599386,
+        "Precision": 0.10638055016550622,
+        "Sensitivity": 0.33256021409455844,
+        "Specificity": 0.9488946985348595,
+        "Threshold": 0.78,
+        "TN": 290729,
+        "FP": 15658,
+        "FN": 3741,
+        "TP": 1864
+      },
+      "runtime_seconds": 104.754070520401,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.257249069491098,
+          "val_loss": 1.2953135496691655,
+          "val_AUPRC": 0.055825771282871264,
+          "val_AUROC": 0.6986056005254794
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.2097321973290553,
+          "val_loss": 1.2104383581563045,
+          "val_AUPRC": 0.05561936170879513,
+          "val_AUROC": 0.7400104841685734
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.1721342760463094,
+          "val_loss": 1.1779578234020032,
+          "val_AUPRC": 0.060963660666969365,
+          "val_AUROC": 0.7555306622626394
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.1605664749478184,
+          "val_loss": 1.1513893729762028,
+          "val_AUPRC": 0.07191521922803998,
+          "val_AUROC": 0.7633658806602357
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.1403578162193297,
+          "val_loss": 1.2210849554915177,
+          "val_AUPRC": 0.07434909399304943,
+          "val_AUROC": 0.7526752339843884
+        }
+      ],
+      "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\LSTM4-F3\\best_model.pt"
+    },
+    {
+      "experiment_id": "TR1-F1",
+      "family": "TRANSFORMER",
+      "feature_set": "F1",
+      "input_features": 152,
+      "configuration": {
+        "id": "TR1-F1",
+        "family": "TRANSFORMER",
+        "feature_set": "F1",
+        "d_model": 64,
+        "nhead": 4,
+        "num_layers": 2,
+        "dim_feedforward": 128,
+        "dropout": 0.1,
+        "lr": 0.001
+      },
+      "seed": 42,
+      "epochs": 5,
+      "batch_size": 128,
+      "pos_weight": 54.734,
+      "best_epoch": 3,
+      "validation": {
+        "loss": 1.173545125283693,
+        "AUROC": 0.7711198669433109,
+        "AUPRC": 0.07861027888862487,
+        "F1": 0.16091329165534113,
+        "Precision": 0.11527976113202648,
+        "Sensitivity": 0.2663467306538692,
+        "Specificity": 0.9619738978568121,
+        "Threshold": 0.79,
+        "TN": 172404,
+        "FP": 6815,
+        "FN": 2446,
+        "TP": 888
+      },
+      "test": {
+        "loss": 1.1248319325968623,
+        "AUROC": 0.7720851073508519,
+        "AUPRC": 0.08384481838429622,
+        "F1": 0.16936838759478726,
+        "Precision": 0.11359483493726398,
+        "Sensitivity": 0.3327386262265834,
+        "Specificity": 0.9525012484211145,
+        "Threshold": 0.79,
+        "TN": 291834,
+        "FP": 14553,
+        "FN": 3740,
+        "TP": 1865
+      },
+      "runtime_seconds": 160.1971492767334,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.2477503996948862,
+          "val_loss": 1.2372028404160549,
+          "val_AUPRC": 0.06225049168615532,
+          "val_AUROC": 0.71369839351588
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.185708560777265,
+          "val_loss": 1.1879142538497323,
+          "val_AUPRC": 0.0695279618774811,
+          "val_AUROC": 0.7495914922104883
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.1545393295066302,
+          "val_loss": 1.173545125283693,
+          "val_AUPRC": 0.07861027888862487,
+          "val_AUROC": 0.7711198669433109
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.1410257974336313,
+          "val_loss": 1.2108130360904492,
+          "val_AUPRC": 0.07594471589860442,
+          "val_AUROC": 0.7687267684311245
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.1274525618830393,
+          "val_loss": 1.1735092276021053,
+          "val_AUPRC": 0.07510253411729963,
+          "val_AUROC": 0.7753256595680346
+        }
+      ],
+      "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\TR1-F1\\best_model.pt"
+    },
+    {
+      "experiment_id": "TR1-F2",
+      "family": "TRANSFORMER",
+      "feature_set": "F2",
+      "input_features": 296,
+      "configuration": {
+        "id": "TR1-F2",
+        "family": "TRANSFORMER",
+        "feature_set": "F2",
+        "d_model": 64,
+        "nhead": 4,
+        "num_layers": 2,
+        "dim_feedforward": 128,
+        "dropout": 0.1,
+        "lr": 0.001
+      },
+      "seed": 42,
+      "epochs": 5,
+      "batch_size": 128,
+      "pos_weight": 54.734,
+      "best_epoch": 5,
+      "validation": {
+        "loss": 1.198159475075571,
+        "AUROC": 0.7609082658998138,
+        "AUPRC": 0.07575574379020883,
+        "F1": 0.15544701635166702,
+        "Precision": 0.1203155818540434,
+        "Sensitivity": 0.21955608878224356,
+        "Specificity": 0.9701370948392749,
+        "Threshold": 0.82,
+        "TN": 173867,
+        "FP": 5352,
+        "FN": 2602,
+        "TP": 732
+      },
+      "test": {
+        "loss": 1.115683859679848,
+        "AUROC": 0.7792090563767738,
+        "AUPRC": 0.07577070036716733,
+        "F1": 0.1655742219774167,
+        "Precision": 0.1197609561752988,
+        "Sensitivity": 0.2681534344335415,
+        "Specificity": 0.9639442926756031,
+        "Threshold": 0.82,
+        "TN": 295340,
+        "FP": 11047,
+        "FN": 4102,
+        "TP": 1503
+      },
+      "runtime_seconds": 187.21046447753906,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.2638609911120215,
+          "val_loss": 1.3254009297019558,
+          "val_AUPRC": 0.0620774377543775,
+          "val_AUROC": 0.7257728914994039
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.1832989972691204,
+          "val_loss": 1.2098479694441746,
+          "val_AUPRC": 0.06836728012821609,
+          "val_AUROC": 0.7435789693288054
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.1781838446162467,
+          "val_loss": 1.2179118379166252,
+          "val_AUPRC": 0.07422282392688954,
+          "val_AUROC": 0.752764990554749
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.140600309261056,
+          "val_loss": 1.2374941440005052,
+          "val_AUPRC": 0.07325325516962018,
+          "val_AUROC": 0.7497877772829254
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.1381368187970893,
+          "val_loss": 1.198159475075571,
+          "val_AUPRC": 0.07575574379020883,
+          "val_AUROC": 0.7609082658998138
+        }
+      ],
+      "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\TR1-F2\\best_model.pt"
+    },
+    {
+      "experiment_id": "TR1-F3",
+      "family": "TRANSFORMER",
+      "feature_set": "F3",
+      "input_features": 306,
+      "configuration": {
+        "id": "TR1-F3",
+        "family": "TRANSFORMER",
+        "feature_set": "F3",
+        "d_model": 64,
+        "nhead": 4,
+        "num_layers": 2,
+        "dim_feedforward": 128,
+        "dropout": 0.1,
+        "lr": 0.001
+      },
+      "seed": 42,
+      "epochs": 5,
+      "batch_size": 128,
+      "pos_weight": 54.734,
+      "best_epoch": 3,
+      "validation": {
+        "loss": 1.1494703135992352,
+        "AUROC": 0.7728948867600977,
+        "AUPRC": 0.07952819705016599,
+        "F1": 0.15912897822445563,
+        "Precision": 0.11535348084187803,
+        "Sensitivity": 0.2564487102579484,
+        "Specificity": 0.9634134773656811,
+        "Threshold": 0.74,
+        "TN": 172662,
+        "FP": 6557,
+        "FN": 2479,
+        "TP": 855
+      },
+      "test": {
+        "loss": 1.1088413810357451,
+        "AUROC": 0.7756602142584786,
+        "AUPRC": 0.08107316675610349,
+        "F1": 0.16167949083309585,
+        "Precision": 0.11016894297365526,
+        "Sensitivity": 0.30365744870651207,
+        "Specificity": 0.9551319083381475,
+        "Threshold": 0.74,
+        "TN": 292640,
+        "FP": 13747,
+        "FN": 3903,
+        "TP": 1702
+      },
+      "runtime_seconds": 192.08086466789246,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.243875005633332,
+          "val_loss": 1.190928545437361,
+          "val_AUPRC": 0.07891263552361816,
+          "val_AUROC": 0.7426324066228664
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.1746206000793813,
+          "val_loss": 1.1937217837885807,
+          "val_AUPRC": 0.07517797619519204,
+          "val_AUROC": 0.7500099921986042
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.1399069639139396,
+          "val_loss": 1.1494703135992352,
+          "val_AUPRC": 0.07952819705016599,
+          "val_AUROC": 0.7728948867600977
+        },
+        {
+          "epoch": 4,
+          "train_loss": 1.125172283483106,
+          "val_loss": 1.2469903183610815,
+          "val_AUPRC": 0.07020157761337918,
+          "val_AUROC": 0.7563379057207937
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.1125759540602218,
+          "val_loss": 1.1851956577677476,
+          "val_AUPRC": 0.0791490425565217,
+          "val_AUROC": 0.781745777293188
+        }
+      ],
+      "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\feature_ablation\\TR1-F3\\best_model.pt"
+    }
+  ]
+}

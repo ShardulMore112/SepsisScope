@@ -1,0 +1,9 @@
+{
+  "experiment": "LSTM-1",
+  "status": "COMPLETE",
+  "completed_at": "2026-10-04 20:04:47",
+  "reconstructed_without_training": false,
+  "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\lstm_family\\lstm-1.pt",
+  "result_file": "D:\\CAPSTONE\\SEPSIS\\results\\model_result\\lstm_family\\lstm-1_result.json",
+  "test_predictions": "D:\\CAPSTONE\\SEPSIS\\results\\model_result\\lstm_family\\lstm-1_test_predictions.npz"
+}

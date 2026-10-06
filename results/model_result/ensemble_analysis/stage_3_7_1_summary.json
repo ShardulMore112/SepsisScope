@@ -1,0 +1,34 @@
+{
+  "stage": "3.7.1",
+  "description": "Validation-only equal-weight feature-combination ensemble analysis.",
+  "architectures": [
+    "GRU5",
+    "LSTM4",
+    "TR1"
+  ],
+  "features": [
+    "F0",
+    "F1",
+    "F2",
+    "F3"
+  ],
+  "combinations_per_architecture": 15,
+  "total_candidates": 45,
+  "validation_samples": 182553,
+  "validation_positive": 3334,
+  "validation_negative": 179219,
+  "selection_metric": "AUPRC",
+  "threshold_selection": "Maximum validation F1",
+  "ensemble_method": "Equal-weight probability averaging",
+  "global_best": {
+    "rank": 1,
+    "architecture": "TR1",
+    "combination": "F0+F1+F2+F3",
+    "AUPRC": 0.08968429347785922,
+    "AUROC": 0.79044028125727,
+    "F1": 0.16682646212847554,
+    "Sensitivity": 0.26094781043791243,
+    "Specificity": 0.9652603797588425,
+    "Threshold": 0.764
+  }
+}

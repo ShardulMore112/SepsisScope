@@ -1,0 +1,9 @@
+{
+  "experiment": "GRU-5",
+  "status": "COMPLETE",
+  "completed_at": "2026-10-04 20:00:18",
+  "reconstructed_without_training": true,
+  "checkpoint": "D:\\CAPSTONE\\SEPSIS\\checkpoints\\gru_family\\gru-5.pt",
+  "result_file": "D:\\CAPSTONE\\SEPSIS\\results\\model_result\\gru_family\\gru-5_result.json",
+  "test_predictions": "D:\\CAPSTONE\\SEPSIS\\results\\model_result\\gru_family\\gru-5_test_predictions.npz"
+}

@@ -1,0 +1,53 @@
+{
+    "project": "X-FedSepsis",
+    "random_seed": 42,
+    "dataset": {
+        "set_a_patients": 20336,
+        "set_b_patients": 20000,
+        "total_patients": 40336,
+        "total_hourly_rows": 1552210,
+        "sepsis_positive": 2932,
+        "non_sepsis": 37404,
+        "prevalence_percent": 7.268940896469656
+    },
+    "splits": [
+        {
+            "name": "train",
+            "patients": 27427,
+            "sepsis_positive": 1994,
+            "non_sepsis": 25433,
+            "prevalence_percent": 7.270208189010829,
+            "total_hours": 1057665
+        },
+        {
+            "name": "validation",
+            "patients": 4841,
+            "sepsis_positive": 352,
+            "non_sepsis": 4489,
+            "prevalence_percent": 7.271224953522,
+            "total_hours": 182553
+        },
+        {
+            "name": "test",
+            "patients": 8068,
+            "sepsis_positive": 586,
+            "non_sepsis": 7482,
+            "prevalence_percent": 7.263262270699059,
+            "total_hours": 311992
+        },
+        {
+            "name": "pilot",
+            "patients": 1000,
+            "sepsis_positive": 300,
+            "non_sepsis": 700,
+            "prevalence_percent": 30.0,
+            "total_hours": 43976
+        }
+    ],
+    "files": {
+        "split_indices": "D:\\CAPSTONE\\SEPSIS\\data\\splits\\split_indices.npz",
+        "patient_splits": "D:\\CAPSTONE\\SEPSIS\\results\\patient_splits.csv",
+        "patient_audit": "D:\\CAPSTONE\\SEPSIS\\results\\dataset_audit_patients.csv",
+        "missingness_audit": "D:\\CAPSTONE\\SEPSIS\\results\\missingness_audit.csv"
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "experiment_id": "TR-1",
+  "status": "COMPLETE",
+  "best_epoch": 15,
+  "validation_auprc": 0.08679843587432258,
+  "validation_auroc": 0.7819580000102624,
+  "validation_f1": 0.16665130426767444,
+  "threshold": 0.8,
+  "test_auprc": 0.08186922270818592,
+  "test_auroc": 0.775282873475622
+}
