@@ -7,7 +7,14 @@
 </p>
 
 <p align="center">
-  <img src="figures/final_model_comparison.png" alt="Model comparison" width="760">
+  <img src="figures/final_model_comparison.png" alt="Model comparison" width="520">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Research%20Prototype-6f42c1" alt="Research Prototype">
+  <img src="https://img.shields.io/badge/Task-Temporal%20Clinical%20ML-2ea44f" alt="Temporal Clinical ML">
+  <img src="https://img.shields.io/badge/Dataset-PhysioNet%20CinC%202019-0969da" alt="PhysioNet">
+  <img src="https://img.shields.io/badge/Focus-Prediction%20Behavior-f39c12" alt="Prediction Behavior">
 </p>
 
 ---
@@ -21,6 +28,23 @@ The project is motivated by a simple observation: predictive performance alone d
 Rather than treating sepsis prediction purely as a benchmark problem, SepsisScope investigates the **nature, stability, timing, and complementarity of model predictions** under a controlled experimental protocol. The study compares GRU, LSTM, causal Transformer, and tree-based approaches across progressively richer causal feature representations, followed by systematic ensemble analysis and patient-level evaluation.
 
 The framework is a research prototype for understanding temporal prediction behavior. It is **not a clinically validated diagnostic or decision-support system**.
+
+---
+
+## At a Glance
+
+| | |
+|---|---|
+| **Dataset** | PhysioNet/CinC Challenge 2019 |
+| **Patients** | 40,336 |
+| **Hourly observations** | 1,552,210 |
+| **Representations** | F0 → F3 causal feature hierarchy |
+| **Architectures** | GRU · LSTM · Causal Transformer · tree-based references |
+| **Primary metric** | AUPRC |
+| **Evaluation** | Timestep + patient level |
+| **Core question** | How do temporal model predictions behave? |
+
+> **Research perspective:** SepsisScope is not primarily a race for the highest benchmark score. The central goal is to understand how **representation, architecture, and ensemble design shape temporal prediction behavior**.
 
 ---
 
@@ -385,29 +409,29 @@ Relevant figures are stored in `figures/`.
 
 ## Selected Figures
 
-### Model comparison
+<p align="center">
+  <img src="figures/final_model_comparison.png" alt="Model comparison" width="500">
+</p>
 
-![Model comparison](figures/final_model_comparison.png)
+<p align="center">
+  <img src="figures/final_roc_curve.png" alt="ROC curve" width="500">
+</p>
 
-### ROC curve
+<p align="center">
+  <img src="figures/final_precision_recall_curve.png" alt="Precision-recall curve" width="500">
+</p>
 
-![ROC curve](figures/final_roc_curve.png)
+<p align="center">
+  <img src="figures/final_patient_roc_curve.png" alt="Patient-level ROC curve" width="500">
+</p>
 
-### Precision-recall curve
+<p align="center">
+  <img src="figures/final_patient_precision_recall_curve.png" alt="Patient-level precision-recall curve" width="500">
+</p>
 
-![Precision-recall curve](figures/final_precision_recall_curve.png)
-
-### Patient-level ROC
-
-![Patient ROC](figures/final_patient_roc_curve.png)
-
-### Patient-level precision-recall
-
-![Patient PR](figures/final_patient_precision_recall_curve.png)
-
-### Lead-time distribution
-
-![Lead time](figures/final_lead_time_distribution.png)
+<p align="center">
+  <img src="figures/final_lead_time_distribution.png" alt="Lead-time distribution" width="500">
+</p>
 
 ---
 
@@ -494,6 +518,9 @@ Large raw datasets, processed arrays, patient-level intermediate outputs, and mo
 
 ## Reproducibility
 
+<details>
+<summary><b>Setup and execution</b></summary>
+
 ### 1. Obtain the dataset
 
 Download the PhysioNet/CinC Challenge 2019 dataset from PhysioNet.
@@ -537,6 +564,8 @@ Scripts under `src/` and `experiments/` contain the experiments for:
 - final evaluation.
 
 Exact configurations and experimental results are documented in the accompanying manuscript and reports.
+
+</details>
 
 ---
 
@@ -608,5 +637,9 @@ It has **not been clinically validated** and must not be used to diagnose sepsis
 ---
 
 <p align="center">
-  <i>SepsisScope — studying not only whether a model predicts, but how its predictions behave.</i>
+  <sub><b>SepsisScope</b> · Temporal prediction behavior in longitudinal clinical data</sub>
+</p>
+
+<p align="center">
+  <i>Not only whether a model predicts — but how its predictions behave.</i>
 </p>
